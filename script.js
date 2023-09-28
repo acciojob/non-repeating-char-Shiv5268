@@ -1,23 +1,13 @@
 function firstNonRepeatedChar(str) {
- // Write your code here
-	let n =str.length(); 
-	let ans=""; 
-	document.alert(ans);
-	// for (let i=0; i<n;i++) {
-	// 	var c=str.charAt(i);
-	// 	if(ans.isEmpty())
-	// 	{ 
-	// 		ans=ans+c;
-	// 	}
-	// 	else if(c==str.charAt(i+1))
-	// 	{
-	// 		ans.splice(0,-1)
-	// 	}
-	// 	else 
-	// 	{
-	// 		return ans;
-	// 	}
-	// }
+ // Write your code here 
+	let ans=null; 
+	for (let i=0; i<str.length;i++) {
+		if(ans==null)
+			ans=str.charAt(i);
+		else if(ans==str.charAt(i))
+			ans=null;
+	}
+	return ans;
 }
-// const input = prompt("Enter a string");
-// alert(firstNonRepeatedChar(input)); 
+const input = prompt("Enter a string"); 
+alert(firstNonRepeatedChar(input)); 
