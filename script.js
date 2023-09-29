@@ -7,9 +7,9 @@ function firstNonRepeatedChar(str) {
         else
             count[c)]=1;
     }
-    for (let i=0;i<n;i++) {
-       let ch=str[i];
-        if(count[c]===1){
+    for (let i=0;i<str.length;i++) {
+       let c=str[i]; 
+        if(count[c]===1){  
             return c;
         }
     }
